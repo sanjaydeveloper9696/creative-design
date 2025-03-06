@@ -1,0 +1,87 @@
+@media (max-width: 768px) {
+
+
+    .logo-size {
+        width: 50px;
+    }
+
+    .d-flexx {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .text-air-paln {
+        margin-top: 20px;
+    }
+
+    .about-heading {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+
+
+
+    .think-unique {
+        padding: 20px 15px !important;
+    }
+
+
+
+    .btn-purchase {
+        width: 100%;
+        background-color: #007bff;
+        border: none;
+        padding: 10px 25px;
+        color: #fff;
+        border-radius: 6px;
+    }
+
+    .bg-dark h2 {
+        font-size: 1.3rem;
+    
+    }
+
+    .image-container {
+ 
+        background-position-y: -0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+
+
+        .strip-video {
+
+            background-position-x: -291px;
+            
+        }
+
+        .contact-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .contact-image,
+        .contact-form {
+            width: 90%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+
+        .logo-rsystem {
+            width: 24%;
+            padding: 13px 20px;
+        }
+
+        .side-image {
+            /* background-image: url(../images/side-img7.jpg); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 160px;
+        }
+
+}

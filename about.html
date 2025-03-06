@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/custom/style.css">
+        <link rel="stylesheet" href="assets/custom/responsive.css">
+
+        <link rel="stylesheet" href="assets/fonts/Poppins-Regular.ttf">
+
+<style>
+
+
+
+.latest-projects{
+text-align: center;
+font-weight: 800;
+padding-bottom: 25px;
+}
+
+
+.nav-tabs .nav-link {
+    margin-bottom: calc(-1* var(--bs-nav-tabs-border-width));
+    border: var(--bs-nav-tabs-border-width) solid transparent;
+    border-top-left-radius: var(--bs-nav-tabs-border-radius);
+    border-top-right-radius: var(--bs-nav-tabs-border-radius);
+    background: #000;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: #fff;
+    width: 100px;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    /* Adjust padding as needed */
+}
+
+
+
+.photo-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-container img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.photo-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    left: -100%; /* Initially hidden below the container */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    text-align: center;
+    background-color: #FFF;
+    border: 1px solid ; 
+    padding: 10px;
+    color: #000;
+    border-radius: 5px;
+    
+    /* Combined transition */
+    transition: left 0.4s ease-in-out, opacity 0.3s ease;
+}
+
+.photo-container:hover .overlay {
+    opacity: 1;
+    width: 95%;
+    height: 95%;
+    height: 93%;
+    bottom: 10px;
+    left: 10px;
+
+}
+
+
+
+.plush-button{
+    text-align: center;
+    padding-top: 25px;
+}
+
+.button5 {
+    background-color: #f39c12;
+    border: none;
+    padding: 8px 55px;
+    border-radius: 6px;
+}
+
+.button5:hover {
+    background-color: #e67e22;
+}
+.button.pulse:hover{
+    animation: pulse 1s infinite;
+  }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+
+<header>
+
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-white">
+    <div class="container">
+        <a class="navbar-brand text-dark" href="index.php">
+            <img src="assets/images/Rsystems_Logo_blu.png" class="logo-size" alt="R Systems Logo">
+        </a>
+        <button class="navbar-toggler" type="button" id="menuToggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Off-canvas Sidebar -->
+<div class="offcanvas-menu" id="offcanvasMenu">
+
+    <img src="assets/images/Rsystems_Logo_blu.png" class="logo-rsystem" alt="">
+    <span class="close-btn" id="closeMenu">&times;</span>
+    <ul class="navbar-nav mt-4">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+</header>
+
+
+
+    
+    <div class="container mt-4">
+
+        <h2 class="latest-projects">Our Latest Projects</h2>
+    
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button"
+                    role="tab" aria-controls="all" aria-selected="true">All</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="fashion-tab" data-bs-toggle="tab" data-bs-target="#fashion" type="button"
+                    role="tab" aria-controls="fashion" aria-selected="false">Fashion</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lifestyle-tab" data-bs-toggle="tab" data-bs-target="#lifestyle"
+                    type="button" role="tab" aria-controls="lifestyle" aria-selected="false">Lifestyle</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="nature-tab" data-bs-toggle="tab" data-bs-target="#nature" type="button"
+                    role="tab" aria-controls="nature" aria-selected="false">Nature</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="people-tab" data-bs-toggle="tab" data-bs-target="#people" type="button"
+                    role="tab" aria-controls="people" aria-selected="false">People</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="studio-tab" data-bs-toggle="tab" data-bs-target="#studio" type="button"
+                    role="tab" aria-controls="studio" aria-selected="false">Studio</button>
+            </li>
+        </ul>
+    
+        <div class="tab-content mt-3" id="myTabContent">
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img1.jpg" alt="A beautiful landscape">
+                                <div class="overlay">
+                                    <h4>Landscape View</h4>
+                                    <p>Nature's beauty captured.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img4.jpg" alt="A fashionable model">
+                                <div class="overlay">
+                                    <h4>Fashion Shoot</h4>
+                                    <p>Latest trends showcased.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="People gathering at a festival">
+                                <div class="overlay">
+                                    <h4>Festival Crowd</h4>
+                                    <p>Celebrating together.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img4.jpg" alt="Still life in a studio">
+                                <div class="overlay">
+                                    <h4>Studio Still Life</h4>
+                                    <p>Artistic composition.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img5.jpg" alt="A person enjoying a healthy lifestyle">
+                                <div class="overlay">
+                                    <h4>Healthy Living</h4>
+                                    <p>Embracing wellness.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="A detailed fashion shot">
+                                <div class="overlay">
+                                    <h4>Fashion Detail</h4>
+                                    <p>Focus on the details.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="fashion" role="tabpanel" aria-labelledby="fashion-tab">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img1.jpg" alt="A fashionable model">
+                                <div class="overlay">
+                                    <h4>Fashion Shoot</h4>
+                                    <p>Latest trends showcased.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="A detailed fashion shot">
+                                <div class="overlay">
+                                    <h4>Fashion Detail</h4>
+                                    <p>Focus on the details.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="lifestyle" role="tabpanel" aria-labelledby="lifestyle-tab">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img5.jpg" alt="A person enjoying a healthy lifestyle">
+                                <div class="overlay">
+                                    <h4>Healthy Living</h4>
+                                    <p>Embracing wellness.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nature" role="tabpanel" aria-labelledby="nature-tab">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img1.jpg" alt="A beautiful landscape">
+                                <div class="overlay">
+                                    <h4>Landscape View</h4>
+                                    <p>Nature's beauty captured.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="people" role="tabpanel" aria-labelledby="people-tab">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="People gathering at a festival">
+                                <div class="overlay">
+                                    <h4>Festival Crowd</h4>
+                                    <p>Celebrating together.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="People gathering at a festival">
+                                <div class="overlay">
+                                    <h4>Festival Crowd</h4>
+                                    <p>Celebrating together.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="People gathering at a festival">
+                                <div class="overlay">
+                                    <h4>Festival Crowd</h4>
+                                    <p>Celebrating together.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="studio" role="tabpanel" aria-labelledby="studio-tab">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img4.jpg" alt="Still life in a studio">
+                                <div class="overlay">
+                                    <h4>Studio Still Life</h4>
+                                    <p>Artistic composition.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="People gathering at a festival">
+                                <div class="overlay">
+                                    <h4>Festival Crowd</h4>
+                                    <p>Celebrating together.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-4 mb-4">
+                            <div class="photo-container">
+                                <img src="assets/images/gallary/img3.jpg" alt="People gathering at a festival">
+                                <div class="overlay">
+                                    <h4>Festival Crowd</h4>
+                                    <p>Celebrating together.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="plush-button">
+            <button class="button button5 pulse">Load More</button>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/custom.js/custom.js"></script>
+</body>
+</html>
